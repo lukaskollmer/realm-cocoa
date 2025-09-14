@@ -18,7 +18,7 @@
 
 #import <Realm/RLMConstants.h>
 
-RLM_HEADER_AUDIT_BEGIN(nullability, sendability)
+RLM_HEADER_AUDIT_BEGIN(nullability)
 
 /// :nodoc:
 @interface RLMObjectBase : NSObject
@@ -37,4 +37,4 @@ RLM_HEADER_AUDIT_BEGIN(nullability, sendability)
 
 @end
 
-RLM_HEADER_AUDIT_END(nullability, sendability)
+RLM_HEADER_AUDIT_END(nullability)

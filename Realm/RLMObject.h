@@ -29,6 +29,8 @@ RLM_HEADER_AUDIT_BEGIN(nullability, sendability)
 @class RLMRealm;
 @class RLMResults<RLMObjectType>;
 
+RLM_HEADER_AUDIT_END(nullability, sendability)
+
 /**
  `RLMObject` is a base class for model objects representing data stored in Realms.
 
@@ -93,6 +95,7 @@ RLM_HEADER_AUDIT_BEGIN(nullability, sendability)
     times when you *cannot* begin a write transaction.
  */
 
+RLM_HEADER_AUDIT_BEGIN(nullability)
 @interface RLMObject : RLMObjectBase <RLMThreadConfined>
 
 #pragma mark - Creating & Initializing Objects
@@ -748,6 +751,10 @@ typedef void (^RLMObjectChangeBlock)(BOOL deleted,
 - (void)setObject:(nullable id)obj forKeyedSubscript:(NSString *)key;
 
 @end
+
+
+RLM_HEADER_AUDIT_END(nullability)
+RLM_HEADER_AUDIT_BEGIN(nullability, sendability)
 
 /**
  Information about a specific property which changed in an `RLMObject` change notification.

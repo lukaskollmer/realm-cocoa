@@ -18,7 +18,7 @@
 
 #import <Realm/RLMObjectBase.h>
 
-RLM_HEADER_AUDIT_BEGIN(nullability, sendability)
+RLM_HEADER_AUDIT_BEGIN(nullability)
 /**
  `Object` is a class used to define Realm model objects.
 
@@ -138,5 +138,5 @@ RLM_HEADER_AUDIT_BEGIN(nullability, sendability)
 @interface RealmSwiftAsymmetricObject : RLMObjectBase
 @end
 
-RLM_HEADER_AUDIT_END(nullability, sendability)
+RLM_HEADER_AUDIT_END(nullability)
 
