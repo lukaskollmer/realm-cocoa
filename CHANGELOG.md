@@ -1,3 +1,18 @@
+20.0.4 Release notes (2026-02-22)
+=============================================================
+
+* Update build scripts for Xcode 26.
+* Drop support for Xcode < 26.
+* Prebuilt binaries are no longer code signed as Realm is no longer officially
+  distributed by MongoDB.
+* Fix compilation with Xcode 26.4.
+
+### Compatibility
+
+* Carthage release for Swift is built with Xcode 26.3.
+* CocoaPods: 1.10 or later.
+* Xcode: 26.1-26.4
+
 20.0.3 Release notes (2025-06-15)
 =============================================================
 
