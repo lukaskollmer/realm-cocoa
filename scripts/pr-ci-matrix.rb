@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-XCODE_VERSIONS = %w(26.1 26.2 26.3 26.4)
-DOC_VERSION = '26.3'
+XCODE_VERSIONS = %w(26.1 26.2 26.3 26.4.1 26.5 27.0)
+DOC_VERSION = '26.5'
 
 all = ->(v) { true }
 latest_only = ->(v) { v == XCODE_VERSIONS.last }
@@ -82,7 +82,7 @@ targets.each { |name, filter|
     if not filter.call(version)
       next
     end
-    image = 'macos-26'
+    image =version.start_with?('27') ? 'xcode-27' : 'macos-26'
     output_file << """
   #{name}-#{version.gsub(' ', '_').gsub('.', '_')}:
     runs-on: #{image}
